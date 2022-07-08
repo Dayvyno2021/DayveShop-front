@@ -1,0 +1,32 @@
+.orderlist--container{
+  grid-column: col-start 1/col-end 10;
+  margin-top: 5rem;
+  min-height: 75vh;
+  font-size: 1.4rem;
+}
+
+.orderlist{
+  
+  table{
+    margin: 1rem 0;
+  
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+  
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  }
+
+  .tabledata {
+    display: flex;
+    align-items: center;
+  }
+}

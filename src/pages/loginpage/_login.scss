@@ -1,0 +1,57 @@
+.login--container {
+  grid-column: col-start 3/ span 6;
+  margin-top: 6rem;
+  font-size: var(--font16);
+  padding: 2rem 4rem;
+  padding-bottom: 3rem;
+  @include bs-light;
+}
+
+.login {
+  padding: 2rem;
+  padding-bottom: 4rem;
+
+  &--control {
+    @include bs-light;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+
+    &>*:not(:last-child){
+      margin-right: 2rem;
+    }
+  }
+
+  &--heading{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .input {
+    padding: 0.5rem;
+    width: 70%;
+    border: none;
+    border-bottom: 1.2px solid $color-primary-dark;
+
+    &:focus, &:active {
+      @include bs-light;
+      outline: none;
+      border-bottom: 1.5px solid $color-primary-dark;
+      font-style: italic;
+    }
+
+    &::placeholder{
+      font-style: italic;
+    }
+  }
+
+  &--button {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    color: $color-font;
+  }
+}

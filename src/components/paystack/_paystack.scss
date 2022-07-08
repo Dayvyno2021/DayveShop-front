@@ -1,0 +1,18 @@
+.paystack {
+  grid-column: col-start 3/ span 6;
+  margin-top: 6rem;
+  font-size: var(--font16);
+  padding: 2rem 4rem;
+  padding-bottom: 3rem;
+  @include bs-light;
+
+  &--heading{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.paystack-button {
+  width: 10rem;
+  height: 3rem;
+}

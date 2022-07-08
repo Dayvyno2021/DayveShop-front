@@ -1,0 +1,21 @@
+.pagination{
+  margin-top: 2rem;
+  display: block;
+  text-align: center;
+
+  &--button{
+    background-color: $color-primary-light;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    border: none;
+    cursor: pointer;
+    color: $color-font;
+    &:hover{
+      background-color: $color-primary-dark;
+    }
+    &:active, &:focus{
+      background-color: $color-primary-dark;
+    }
+  }
+}

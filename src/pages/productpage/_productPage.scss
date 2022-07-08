@@ -1,0 +1,165 @@
+.product {
+  grid-column: full-start / -1;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(5vw, 1fr));
+  // grid-template-columns: repeat(10, minmax(10vw, 1fr));
+  grid-gap: 2rem;
+  font-size: var(--font14);
+  margin-top: 4rem;
+
+  &--image {
+    grid-column: 4 / 8;
+    padding: 2rem;
+
+    & > img {
+      width: 100%;
+      object-fit: cover;
+      border: 1px solid $color-primary-dark;
+      border-radius: .3rem;
+      padding: 1rem;
+    }
+  }
+
+  &--description {
+    grid-column: 1 / 5;
+    padding: 2rem 2rem;
+    @include bs-light;
+    margin: 1rem;
+    margin-left: 4rem;
+
+    &__name {
+      @include heading-1
+    }
+  }
+
+  &--cart {
+    grid-column: 5/7;
+    // height: 10vw;
+    height: min-content;
+    @include bs-light;
+    padding: 2rem 2rem;
+    margin: 1rem;
+
+    &__heading {
+      @include heading-1;
+    }
+
+    &__element {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0;
+      
+    }
+  }
+
+  &--reviews {
+    grid-column: 7/-1;
+    @include bs-light;
+    padding: 2rem;
+    margin: 1rem;
+    margin-right: 4rem;
+
+
+    &__heading {
+      @include heading-1;
+    }
+
+    .review--control{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+      
+      select, textarea, select:focus, select:active {
+        flex-basis: 70%;
+        border: 1.2px solid $color-primary-dark;
+        outline: 1.2px solid $color-primary-dark;
+        border-radius: 3px;
+      }
+    }
+
+
+  }
+
+  &--element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &:nth-of-type(odd) {
+      border-bottom: 1px solid $color-primary-dark;
+    }
+
+    & > :first-child{
+      padding-right: 2rem;
+    }
+  }
+}
+
+.price{
+  background-color: $color-primary-dark;
+  padding: 0.3rem .5rem;
+  // border-radius: 3px;
+  border: none;
+  color: $color-font;
+}
+
+.btn-n {
+  background-color: $color-primary-dark;
+  padding: 0.3rem .5rem;
+  // border-radius: 3px;
+  border: none;
+  color: $color-font;
+
+  &:hover{
+    filter: brightness(120%)
+  }
+}
+
+
+.go-back {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  font-size: var(--font14);
+  text-decoration: none;
+  color: $color-primary-dark;
+  
+  &>span{
+    margin-left: .3rem;
+    color: $color-primary-dark;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: $color-primary-dark;
+  }
+}
+
+.btn-add {
+  display: block;
+  margin: 0 auto;
+  color: $color-font;
+}
+
+.reviews{
+  grid-column: 1/ -1;
+  width: 100%;
+  margin: 0 3rem;
+  // display: grid;
+  grid-gap: 1rem;
+  
+  &--card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 28rem));
+    grid-gap: 2rem;
+  }
+  
+  &--each{
+    @include bs;
+    padding: 2rem;
+    width: 25rem;
+  }
+}

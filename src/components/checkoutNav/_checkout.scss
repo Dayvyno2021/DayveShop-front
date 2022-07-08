@@ -1,0 +1,21 @@
+.checkout{
+ display: flex;
+ justify-content: center;
+
+ &--nav{
+    padding:0 2rem;
+  }
+}
+
+.nav {
+  color: $color-primary-dark;
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.nav--false{
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+}

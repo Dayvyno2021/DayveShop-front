@@ -1,0 +1,60 @@
+.register--container {
+  grid-column: col-start 3/ span 6;
+  margin-top: 6rem;
+  font-size: var(--font16);
+  padding: 2rem 4rem;
+  @include bs-light;
+}
+
+.register{
+  padding-bottom: 3rem;
+
+  &--control {
+    @include bs-light;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+
+    &>*:not(:last-child){
+      margin-right: 2rem;
+    }
+  }
+
+  &--heading{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .input {
+    padding: 0.5rem;
+    width: 70%;
+    border: none;
+    border-bottom: 1.2px solid $color-primary-dark;
+
+    &:focus, &:active {
+      @include bs-light;
+      outline: none;
+      border-bottom: 1.5px solid $color-primary-dark;
+      font-style: italic;
+    }
+
+    &::placeholder{
+      font-style: italic;
+    }
+  }
+
+  &--login {
+    display: flex;
+    &>*:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &--submit{
+    display: block;
+    margin: 0 auto;
+  }
+}

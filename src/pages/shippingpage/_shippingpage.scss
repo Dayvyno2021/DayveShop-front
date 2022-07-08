@@ -1,0 +1,39 @@
+.shipping {
+  grid-column: col-start 3/ span 6;
+  margin-top: 2rem;
+  font-size: var(--font16);
+  
+  .shipping--form {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    @include bs-light;
+
+
+
+
+    .input {
+      width: 70%;
+      border: none;
+      font-size: var(--font16);
+
+      &:focus, &:active {
+        outline: none;
+        font-style: italic;
+      }
+  
+      &::placeholder{
+        font-style: italic;
+        font-size: var(--font14);
+      }
+    }
+    
+  }
+
+  &--button{
+    display: block;
+    margin: 2rem auto;
+  }
+
+}
+

@@ -1,0 +1,29 @@
+.userslist--container{
+  grid-column: col-start 1/col-end 10;
+  margin-top: 5rem;
+  min-height: 75vh;
+  font-size: var(--font16);
+}
+
+.userslist {
+
+  &--heading{
+    padding: .5rem;
+  }
+
+  &--table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+  
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  }
+}
