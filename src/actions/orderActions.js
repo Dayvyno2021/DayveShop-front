@@ -36,7 +36,7 @@ export const placeOrderAction = (order) => async(dispatch, getState) =>{
     }
 
     const {data} = await axios.post(
-      'http://localhost:5000/api/order/create',
+      'https://dayve-store.herokuapp.com/api/order/create',
       order,
       config
     )
@@ -67,7 +67,7 @@ export const orderDetailsAction = (id) => async(dispatch, getState) => {
     }
 
 
-    const {data} = await axios.get(`http://localhost:5000/api/order/${id}`, config);
+    const {data} = await axios.get(`https://dayve-store.herokuapp.com/api/order/${id}`, config);
 
     dispatch({
       type: ORDER_DETAILS_SUCCESS,
@@ -97,7 +97,7 @@ export const orderPaidAction = (paymentResult, orderId) => async(dispatch, getSt
     }
 
     const {data} = await axios.put(
-      `http://localhost:5000/api/order/${orderId}/paid`,
+      `https://dayve-store.herokuapp.com/api/order/${orderId}/paid`,
       paymentResult,
       config
     )
@@ -126,7 +126,7 @@ export const myOrdersAction = () => async(dispatch, getState)=>{
         Authorization: `Bearer ${token}`
       }
     }
-    const {data} = await axios.get(`http://localhost:5000/api/order/orders/my-orders`, config)
+    const {data} = await axios.get(`https://dayve-store.herokuapp.com/api/order/orders/my-orders`, config)
 
     dispatch({
       type: MY_ORDERS_SUCCESS,
@@ -154,7 +154,7 @@ export const myOrderDeleteAction = (id) => async(dispatch, getState) =>{
     }
 
     const {data} = await axios.delete(
-      `http://localhost:5000/api/order/my-order/delete/${id}`,
+      `https://dayve-store.herokuapp.com/api/order/my-order/delete/${id}`,
       config
     )
 
@@ -183,7 +183,7 @@ export const adminOrderlistAction = () =>async(dispatch, getState) =>{
         Authorization: `Bearer ${token}`
       }
     }
-    const {data} = await axios.get('http://localhost:5000/api/order/orderlist/getorders', config);
+    const {data} = await axios.get('https://dayve-store.herokuapp.com/api/order/orderlist/getorders', config);
 
     dispatch ({
       type: ADMIN_ORDERLIST_SUCCESS,
@@ -210,7 +210,7 @@ export const deliveryStatusAction = (id) => async(dispatch, getState) => {
       }
     }
 
-    const {data} = await axios.put(`http://localhost:5000/api/order/${id}/delivery`, {}, config)
+    const {data} = await axios.put(`https://dayve-store.herokuapp.com/api/order/${id}/delivery`, {}, config)
     dispatch({
       type: DELIVERY_STATUS_SUCCESS,
       payload: data

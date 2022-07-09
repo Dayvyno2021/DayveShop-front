@@ -57,7 +57,7 @@ const ProductScreen = () => {
       </Link>
 
       <div className="product--image">
-        <img src={pro.img? `/api/products/get/${pro._id}`: pro.image} alt="" />
+        <img src={pro.img? `https://dayve-store.herokuapp.com/api/products/get/${pro._id}`: pro.image} alt="" />
       </div>
 
       <div className="product--description">

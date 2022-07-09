@@ -36,7 +36,7 @@ export const userRegisterAction = (input) => async(dispatch) => {
     }
 
     const {data} = await axios.post(
-      'http://localhost:5000/api/user/register', 
+      'https://dayve-store.herokuapp.com/api/user/register', 
       {name, email, password},
       config
     )
@@ -80,7 +80,7 @@ export const userLoginAction = (login) => async(dispatch) => {
     }
   
     const {data} = await axios.post(
-      `http://localhost:5000/api/user/login`,
+      `https://dayve-store.herokuapp.com/api/user/login`,
       {email, password},
       config
       )
@@ -131,7 +131,7 @@ export const userProfileAction = () => async(dispatch, getState) =>{
     }
   }
   
-  const {data} = await axios.get('http://localhost:5000/api/user/profile', config)
+  const {data} = await axios.get('https://dayve-store.herokuapp.com/api/user/profile', config)
 
   dispatch({
     type: USER_PROFILE_SUCCESS,
@@ -173,7 +173,7 @@ export const userUpdateAction = (input) => async(dispatch, getState) => {
     }
 
     const {data} = await axios.post(
-      `http://localhost:5000/api/user/update/${id}`,
+      `https://dayve-store.herokuapp.com/api/user/update/${id}`,
       {name, password},
       config
     )
@@ -220,7 +220,7 @@ export const usersListAction = () => async(dispatch, getState) =>{
       }
     }
 
-    const {data} = await axios.get('http://localhost:5000/api/user/userslist', config);
+    const {data} = await axios.get('https://dayve-store.herokuapp.com/api/user/userslist', config);
     dispatch({
       type: USERLIST_SUCCESS,
       payload: data
@@ -246,7 +246,7 @@ export const adminEditUserAction = (id) => async(dispatch, getState) =>{
       }
     }
 
-    const {data} = await axios.get(`http://localhost:5000/api/user/userslist/${id}`, config);
+    const {data} = await axios.get(`https://dayve-store.herokuapp.com/api/user/userslist/${id}`, config);
 
     dispatch({
       type: ADMIN_EDIT_USER_SUCCESS,
@@ -276,7 +276,7 @@ export const makeAdminAction = (admin, id) => async(dispatch, getState)=>{
     }
 
     const {data} = await axios.put(
-      `http://localhost:5000/api/user/userslist/${id}`,
+      `https://dayve-store.herokuapp.com/api/user/userslist/${id}`,
       {admin}, 
       config
     )
@@ -306,7 +306,7 @@ export const deleteUserAction = (id) => async(dispatch, getState) =>{
       }
     }
 
-    const {data} = await axios.delete(`http://localhost:5000/api/user/userslist/${id}`, config)
+    const {data} = await axios.delete(`https://dayve-store.herokuapp.com//api/user/userslist/${id}`, config)
 
     dispatch({
       type: DELETE_USER_SUCCESS,

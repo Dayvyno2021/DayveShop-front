@@ -69,7 +69,7 @@ const EditProductScreen = () => {
       <div className="createproduct">
         <h2 className="createproduct--header"><i>Create Product</i></h2>
         <div className="createproduct--image">
-          <img src={pro && pro.img? `http://localhost:5000/api/products/get/${pro._id}`: pro.image} alt="" />
+          <img src={pro && pro.img? `https://dayve-store.herokuapp.com/api/products/get/${pro._id}`: pro.image} alt="" />
         </div>
         <form className='createproduct--form' onSubmit={editHotel}>
           <div className="createproduct--form__control">

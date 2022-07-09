@@ -12,7 +12,7 @@ const Cart = ({cartItem, deleteFromCart}) => {
     <div className='cart'>
       <div className="cart--detail">
         <Link to={`/product/${cartItem.product}`}>
-          <img src={cartItem && cartItem.img? `http://localhost:5000/api/products/get/${cartItem.product}`: cartItem.image} alt="" className="cart--detail__image" />
+          <img src={cartItem && cartItem.img? `https://dayve-store.herokuapp.com/api/products/get/${cartItem.product}`: cartItem.image} alt="" className="cart--detail__image" />
           {/* <img src={cartItem.image} alt="" className="cart--detail__image" /> */}
         </Link>
         <Link to={`/product/${cartItem.product}`} className="cart--detail__name ">

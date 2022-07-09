@@ -27,7 +27,7 @@ export const productListAction = (filter='', params='') => async(dispatch) => {
   try {
     dispatch({type: PRODUCT_LIST_REQUEST});
 
-    const {data} = await axios.get(`http://localhost:5000/api/products/?filter=${filter}&pageNumber=${params}`)
+    const {data} = await axios.get(`https://dayve-store.herokuapp.com/api/products/?filter=${filter}&pageNumber=${params}`)
 
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
@@ -49,7 +49,7 @@ export const productDetailsAction= (id) => async(dispatch)=>{
   try {
     dispatch({type: PRODUCT_DETAILS_REQUEST})
 
-    const {data} = await axios.get(`http://localhost:5000/api/products/${id}`);
+    const {data} = await axios.get(`https://dayve-store.herokuapp.com/api/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -79,7 +79,7 @@ export const createProductAction = (product) => async(dispatch, getState) =>{
     }
 
     
-    const {data} = await axios.post('http://localhost:5000/api/products/add/new-product', product, config)
+    const {data} = await axios.post('https://dayve-store.herokuapp.com/api/products/add/new-product', product, config)
 
     dispatch({
       type: CREATE_PRODUCT_SUCCESS,
@@ -109,7 +109,7 @@ export const editProductAction = (details, id) => async(dispatch, getState) => {
     }
 
     const {data} = await axios.put(
-      `http://localhost:5000/api/products/edit/${id}`,
+      `https://dayve-store.herokuapp.com/api/products/edit/${id}`,
       details,
       config
     )
@@ -139,7 +139,7 @@ export const adminDelProductAction = (id)=> async(dispatch, getState) =>{
         Authorization : `Bearer ${token}`
       }
     }
-    const {data} = await axios.delete(`http://localhost:5000/api/products/delete/${id}`, config);
+    const {data} = await axios.delete(`https://dayve-store.herokuapp.com/api/products/delete/${id}`, config);
 
     dispatch ({
       type: ADMIN_DEL_PRO_SUCCESS,
@@ -167,7 +167,7 @@ export const addReviewAction = (details, id) => async(dispatch, getState) =>{
       }
     }
 
-    const {data} = await axios.post(`http://localhost:5000/api/products/review/${id}`, details, config)
+    const {data} = await axios.post(`https://dayve-store.herokuapp.com/api/products/review/${id}`, details, config)
     dispatch({
       type: ADD_REVIEW_SUCCESS,
       payload: data
@@ -186,7 +186,7 @@ export const highRatedAction = ()  => async(dispatch) => {
   try {
     dispatch({type: HIGH_RATED_REQUEST});
 
-    const {data} = await axios.get('http://localhost:5000/api/products/highly-rated/products')
+    const {data} = await axios.get('https://dayve-store.herokuapp.com/api/products/highly-rated/products')
 
     dispatch({
       type: HIGH_RATED_SUCCESS,

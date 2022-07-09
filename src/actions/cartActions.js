@@ -9,7 +9,7 @@ import axios from "axios";
 export const addToCartAction = (qty, id) => async (dispatch, getState) => {
 
   try {
-    const {data} = await axios.get(`http://localhost:5000/api/products/${id}`)
+    const {data} = await axios.get(`https://dayve-store.herokuapp.com/api/products/${id}`)
 
     dispatch({type: ADD_TO_CART_REQUEST})
 

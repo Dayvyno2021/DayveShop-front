@@ -49,7 +49,7 @@ const ProductCarousel = () => {
         <div className="mySlides fades" key={i}>
           <div className="numbertext">{i}/{item && ratedProducts.length} </div>
           <Link to={`/product/${item._id}`}>
-            <img src={item && item.image? item.image : `http://localhost:5000/api/products/get/${item._id}`} alt="" className='carousel--image' />
+            <img src={item && item.image? item.image : `https://dayve-store.herokuapp.com/api/products/get/${item._id}`} alt="" className='carousel--image' />
           </Link>
           <Link to={`/product/${item._id}`} className='rm-deco'>
             <div className="text bold7">{item.name} </div>

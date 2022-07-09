@@ -22,12 +22,6 @@ const ProfileScreen = ({handleShow}) => {
   const {successDel} = myOrderDeleteReducer
 
   useEffect(()=>{
-    // if (!user) {
-    //   dispatch(userProfileAction())
-    // }
-    // if (!success){
-    //   dispatch(myOrdersAction())
-    // }
     if (!orders || successDel){
       dispatch({type:MY_ORDER_DELETE_RESET})
       dispatch(myOrdersAction())

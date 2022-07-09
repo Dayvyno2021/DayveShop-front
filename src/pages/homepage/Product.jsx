@@ -13,7 +13,7 @@ const Product = ({product}) => {
         <span className='card--fake__text' >9% off</span>
       </div>
       <Link to={`/product/${product._id}`}>
-        <img src={product && product.image? product.image : `http://localhost:5000/api/products/get/${product._id}`} alt="" className='card--image' />
+        <img src={product && product.image? product.image : `https://dayve-store.herokuapp.com/api/products/get/${product._id}`} alt="" className='card--image' />
         {/* <img src={product.image || `/api/products/get/${product._id}`} alt="" className='card--image' /> */}
       </Link>
       <Link to={`/product/${product._id}`} className='link'>
