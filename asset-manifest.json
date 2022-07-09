@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DayveShop-front/static/css/main.01e22272.css",
+    "main.js": "/DayveShop-front/static/js/main.f80eaf3f.js",
+    "static/js/787.cda612ba.chunk.js": "/DayveShop-front/static/js/787.cda612ba.chunk.js",
+    "index.html": "/DayveShop-front/index.html",
+    "main.01e22272.css.map": "/DayveShop-front/static/css/main.01e22272.css.map",
+    "main.f80eaf3f.js.map": "/DayveShop-front/static/js/main.f80eaf3f.js.map",
+    "787.cda612ba.chunk.js.map": "/DayveShop-front/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01e22272.css",
+    "static/js/main.f80eaf3f.js"
+  ]
+}
